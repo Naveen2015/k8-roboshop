@@ -8,7 +8,16 @@ metadata:
 spec:
   containers:
     - name: web
+      imagePullPolicy: Always
       image: naveenkumar9707/web:k8
+      resources:
+        requests:
+          cpu: "100m"
+          memory: "128Mi"
+        limits:
+          cpu: "100m"
+          memory: "128Mi"
+
       ports:
         - containerPort: 80
 ---
