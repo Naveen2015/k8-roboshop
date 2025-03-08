@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: mongo
+  name: mongodb
   labels:
-    name: mongo
+    name: mongodb
     tier: db
 spec:
   containers:
-    - name: mongo
+    - name: mongodb
       imagePullPolicy: Always
       image: naveenkumar9707/mongo:k8
       resources:
@@ -22,10 +22,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mongo-service
+  name: mongodb-service
 spec:
   selector:
-    name: mongo
+    name: mongodb
     tier: db
   ports:
     - port: 80
