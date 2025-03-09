@@ -30,5 +30,5 @@ spec:
     name: mongodb
     tier: db
   ports:
-    - port: 80
+    - port: 27017
       targetPort: 27017
